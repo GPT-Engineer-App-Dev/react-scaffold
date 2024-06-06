@@ -1,18 +1,33 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, Flex, Heading, HStack, IconButton, Link, Spacer, Text, VStack } from "@chakra-ui/react";
+import { FaHome, FaInfoCircle, FaPhone } from "react-icons/fa";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
+    <Container maxW="container.xl" p={0}>
+      <Flex as="nav" bg="blue.500" color="white" p={4} align="center">
+        <Heading size="md">My Website</Heading>
+        <Spacer />
+        <HStack spacing={4}>
+          <Link href="/" display="flex" alignItems="center">
+            <FaHome />
+            <Text ml={2}>Home</Text>
+          </Link>
+          <Link href="/about" display="flex" alignItems="center">
+            <FaInfoCircle />
+            <Text ml={2}>About</Text>
+          </Link>
+          <Link href="/contact" display="flex" alignItems="center">
+            <FaPhone />
+            <Text ml={2}>Contact</Text>
+          </Link>
+        </HStack>
+      </Flex>
+      <Box as="main" p={4}>
+        <VStack spacing={4}>
+          <Heading>Welcome to My Website</Heading>
+          <Text>This is a basic structure of a React app with Chakra UI.</Text>
+        </VStack>
+      </Box>
     </Container>
   );
 };
