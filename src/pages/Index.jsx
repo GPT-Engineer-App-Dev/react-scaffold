@@ -1,4 +1,4 @@
-import { Box, Flex, Text, VStack, HStack, Spacer, IconButton } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, HStack, Spacer, IconButton, Container } from "@chakra-ui/react";
 import { FaHome, FaInfoCircle } from "react-icons/fa";
 
 const Index = () => {
@@ -12,7 +12,7 @@ const Index = () => {
           <IconButton aria-label="About" icon={<FaInfoCircle />} size="lg" variant="ghost" color="white" />
         </HStack>
       </Flex>
-      <Container centerContent maxW="container.md" height="calc(100vh - 80px)" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <Container centerContent maxW="container.md" height="calc(100vh - 80px)">
         <VStack spacing={4}>
           <Text fontSize="2xl">Welcome to MyApp</Text>
           <Text>This is a basic structure of a React app with a navigation bar.</Text>
